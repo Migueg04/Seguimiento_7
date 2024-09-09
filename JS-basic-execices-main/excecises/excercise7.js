@@ -6,8 +6,17 @@ Debe tener al menos 8 caracteres.
 Debe contener al menos un número.
 Si cumple con ambas, retornar "Contraseña válida", de lo contrario "Contraseña no válida".
 */
-function validarContrasena(contrasena) {
-    // TODO: Resolver
+function validarContrasena(contraseña) {
+    if (contraseña.length < 8) {
+        return "Contraseña no válida";
+    }
+    const contieneNumero = /\d/.test(contraseña);
+
+    if (contieneNumero) {
+        return "Contraseña válida";
+    } else {
+        return "Contraseña no válida";
+    }
 }
 
 console.log("-----------------------------------")
